@@ -1,25 +1,27 @@
 <h1> Microreact Mutations </h1>
 <h2> Background </h2>
-Researchers often wish to visualise alignment data alongside a phylogeny, either to demonstrate a SNP, or a change in a conserved amino acid. This can be either in the context of epidemiology, e.g. to study the distribution of a known variant associated with host specificity in a virus, studying the prevalence of key mechanistic residues across species, or investigating the level of conservation of a given residue. It can also be challenging to visually present this data, as alignments are so large. 
+Researchers often wish to visualise alignment data alongside a phylogeny, either to demonstrate a SNP, or a change in a conserved amino acid. This can be either in the context of epidemiology, e.g. to study the distribution of a known variant associated with host specificity in a virus, studying the prevalence of key mechanistic residues across species, or investigating the level of conservation of a given residue. It can also be challenging to visually present this data, as alignments can be so large. 
 
-Microreact, intended for epidemiological studies, takes a phylogentic tree as input, alongside a .csv file. Tree nodes are matched to Metadata rows based on unique keys. From there, the user can visualise the metadata alongside the phylogeny as blocks, or generate charts to show the frequency of different variables within each metadata column, and the relationships between them. Microreact also has great in-built features allowing users to create accounts to save their data, and create unique links to share their interactive projects as part of a manuscript. 
+Microreact, intended for epidemiological research, takes a phylogentic tree as input, alongside a .csv file. Tree nodes are matched to metadata rows based on unique sample names. From there, the user can visualise the metadata alongside the phylogeny as blocks, or generate charts to show the frequency of different variables within each metadata column, and the relationships between them. Microreact also has great in-built features allowing users to create accounts to save their data, and create unique links to share their interactive projects as part of a manuscript. 
 
 We created a short Python script that converts FASTA alignments into .csv files that can be used with Microreact. This allows users to visualise phylogenies on Microreact alongside alignment data, making it straightforward to create informative alignment figures. It also adds corresponding amino acid colours from a defined palette, such that Microreact will remain consistent. 
 
 <h2> Usage </h2>
-The Python script process.py takes an alignment file in he FASTA format: 
+The Python script process.py takes an alignment file in FASTA format: 
 
 ```
 > Sequence Name 1 
-MGCTAHIGLIPDS
+MGCT
 > Sequence Name 2 
-MCCTSHIGAIPDS
+MCCT
 ```
 
 And converts it into a .csv, in the format:
 
-Sequence Name 1,M,G,C,T,A,H,I,G,L,I,P,D,S
-Sequence Name 2,M,G,C,T,A,-,I,S,L,I,P,D,S
+```
+Sequence Name 1,M,#ff6f68,G,#01a871,C,#eac250,T,#6a4184
+Sequence Name 2,M,#ff6f68,C,#eac250,C,#eac250,T,#6a4184
+```
 
 This allows for it to be read by Microreact. 
 
@@ -35,4 +37,4 @@ To visualise your data on Microreact, you will need to provide a tree of your pr
 In this repo you'll find an example alignment, tree, and output file. It makes this Microreact here! https://microreact.org/project/mutations 
 
 <h2> Credit </h2>
-Microreact is an incredible tool, a huge thank you to the team who created and maintain it. This extension was created by Alannah and Chris Jensen-King; if you use it, please credit it :) 
+Microreact is an incredible tool, a huge thank you to the team who created and maintain it. This extension was created by Alannah and Chris Jensen-King; if you use it, please credit it (or at least buy us a drink) :) 
