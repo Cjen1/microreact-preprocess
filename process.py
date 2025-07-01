@@ -22,7 +22,7 @@ residue_colour = {
     "V": "#ffa4aa",
     "W": "#8e3440",
     "Y": "#b16e65",
-    "-": "#FFFFFF"]
+    "-": "#FFFFFF"}
 
 #>name
 #<sequence>
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     max_seq_len = 0
     for i in range(n_seqs):
-        max_seq_len = max(max_seq_len, len(data[i]))
+        max_seq_len = max(max_seq_len, len(data[i].strip()))
     seq_cols = ",".join(
             f"Pos_{i + 1},Pos_{i + 1}__colour" for i in range(max_seq_len)
             )
