@@ -36,5 +36,7 @@ To visualise your data on Microreact, you will need to provide a tree of your pr
 ## Example 
 In this repo you'll find an example alignment, tree, and output file. It makes this Microreact here! https://microreact.org/project/mutations 
 
+<img src="./ExampleFigure.svg">
+
 ## Credit 
 Microreact is an incredible tool, a huge thank you to the team who created and maintain it. This extension was created by Alannah and Chris Jensen-King; if you use it, please credit it (or at least buy us a drink) :) 
